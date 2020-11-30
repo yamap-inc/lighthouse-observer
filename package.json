@@ -1,0 +1,29 @@
+{
+  "name": "lighthouse-observer",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/lighthouse/index.js",
+  "scripts": {
+    "transpile": "babel ./scripts --out-dir dist",
+    "lighthouse": "node ./dist/lighthouse/runLighthouse",
+    "fix": "run-s fix:eslint fix:prettier",
+    "fix:eslint": "eslint --fix ./scripts",
+    "fix:prettier": "prettier --write ./scripts"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.36",
+    "googleapis": "^60.0.1",
+    "lighthouse": "^6.3.0",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2"
+  }
+}

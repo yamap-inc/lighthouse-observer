@@ -1,0 +1,10 @@
+{
+  "targets": [
+    {
+      "url": "https://yamap.com",
+      "sheetName": "top"
+    }
+  ],
+  "spreadsheetId": "xxxxxxxxxxxxxxxxxx",
+  "timezone": "Asia/Tokyo"
+}
