@@ -8,18 +8,17 @@ var _spreadsheet = require("./modules/spreadsheet");
 
 /**
  * Triggered from a message on a Cloud Pub/Sub topic.
- *
  * @param {!Object} event Event payload.
  * @param {!Object} context Metadata for the event.
  */
 const main = async (event, _context) => {
-  const bufferString = Buffer.from(event.data, 'base64').toString();
+  const bufferString = Buffer.from(event.data, "base64").toString();
   const config = JSON.parse(bufferString);
   const browser = await (0, _browser.launchBrowser)();
   const auth = await (0, _spreadsheet.getGoogleClientAuth)();
 
   for (let target of config.targets) {
-    console.log('[start]', target.url);
+    console.log("[start]", target.url);
     const {
       lhr
     } = await (0, _lighthouse.runLighthouse)(browser, target.url);

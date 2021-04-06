@@ -15,7 +15,7 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 const formatDatetime = (time, timezone) => {
-  return dayjs(time).tz(timezone).format('YYYY/MM/DD HH:mm');
+  return dayjs(time).tz(timezone).format("YYYY/MM/DD HH:mm");
 };
 
 exports.formatDatetime = formatDatetime;

@@ -7,6 +7,13 @@ export const runLighthouse = async (browser, url) => {
     port: new URL(browser.wsEndpoint()).port,
     output: ["json"],
     logLevel: "info",
+    "form-factor": "mobile",
+    screenEmulation: {
+      width: 360,
+      height: 640,
+      mobile: true,
+      deviceScaleFactor: 2,
+    }
   });
 };
 
